@@ -15,7 +15,6 @@ componentDidMount() {
         this.setState({
             sections: data
         });
-    console.log(this.state.sections)
 }
 
     render() {
