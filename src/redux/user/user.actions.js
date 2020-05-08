@@ -1,10 +1,6 @@
-import { userActionTypes} from "./user.types";
+import {actionsType} from "../../constants/actionsType";
 
 export const setCurrentUser = user => ({
-    type: userActionTypes.SET_CURRENT_USER,
+    type: actionsType.SET_CURRENT_USER,
     payload: user
-});
-
-export const toggleCartHidden = () =>({
-    type: userActionTypes.TOGGLE_CART_HIDDEN
 });

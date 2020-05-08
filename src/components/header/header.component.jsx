@@ -41,7 +41,7 @@ const Header = ({ currentUser, hidden}) => {
 //     ]).isRequired
 // };
 
-const mapStateToProps = ({user: {currentUser, hidden}}) =>({
+const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) =>({
     currentUser,
     hidden
 });
