@@ -11,6 +11,7 @@ import { setCurrentUser } from './redux/user/user.actions'
 
 import './App.css';
 import {selectCurrentUser} from "./redux/user/user.selector";
+import Checkout from "./pages/checkout/checkcout.component";
 
 class App extends Component {
   unSubscribeFromAuth = null;
@@ -47,6 +48,7 @@ class App extends Component {
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
           <Route exact path='/signin' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignInAndSignUp/>)} />
+          <Route extact path='/checkout' component={Checkout} />
         </Switch>
       </div>
     );
