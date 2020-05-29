@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {createStructuredSelector} from "reselect";
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import HomePage from './pages/home/homepage.component'
 import ShopPage from "./pages/shop/shoppage.component";
 import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 import Header from "./components/header/header.component";
-import { Switch, Route, Redirect } from 'react-router-dom'
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
-import { setCurrentUser } from './redux/user/user.actions'
+import {Redirect, Route, Switch} from 'react-router-dom'
+import {auth, createUserProfileDocument} from "./firebase/firebase.utils";
+import {setCurrentUser} from './redux/user/user.actions'
 
 import './App.css';
 import {selectCurrentUser} from "./redux/user/user.selector";
@@ -33,7 +33,7 @@ class App extends Component {
       } else {
         setCurrentUser(userAuth)
       }
-    })
+    });
   }
   componentWillUnmount() {
     this.unSubscribeFromAuth()
@@ -57,11 +57,11 @@ class App extends Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
-  setCurrentUser: user => dispatch(setCurrentUser(user))
+  setCurrentUser: user => dispatch(setCurrentUser(user)),
 });
 
 export default connect(

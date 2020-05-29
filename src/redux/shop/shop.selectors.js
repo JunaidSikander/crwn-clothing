@@ -9,12 +9,12 @@ export const  selectCollections = createSelector(
 
 export const selectCollectionsForPreview = createSelector(
     [selectCollections],
-    collections => Object.keys(collections).map(key => collections[key])
+    collections =>
+        collections ? Object.keys(collections).map(key => collections[key]) : []
 );
 
-export const selectCollection = paramId=> createSelector(
-    [selectCollections],
-    collections => collections[paramId]
+export const selectCollection = collectionUrlParam =>
+    createSelector(
+        [selectCollections],
+        collections => (collections ? collections[collectionUrlParam] : null)
 );
-//collection =>collection.find(collection => collection.id ===COLLECTION_ID_MAP[paramId])
-//collection =>find(collection, { 'id': COLLECTION_ID_MAP[paramId] })
