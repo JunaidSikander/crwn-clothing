@@ -37,10 +37,9 @@ class ShopPage extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => ({
-    updateCollections: collectionMap =>
-        dispatch(updateCollections(collectionMap))
-});
+const mapDispatchToProps = {
+    updateCollections
+};
 
 export default connect(
     null,

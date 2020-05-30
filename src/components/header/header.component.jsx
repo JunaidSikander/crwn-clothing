@@ -34,14 +34,6 @@ const Header = ({ currentUser, hidden}) => {
         </div>
     );
 };
-
-// Header.propTypes = {
-//     currentUser: PropTypes.oneOfType([
-//         PropTypes.object,
-//         () => null
-//     ]).isRequired
-// };
-
 const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser,
     hidden: selectCartHidden

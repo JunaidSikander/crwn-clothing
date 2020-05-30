@@ -22,8 +22,8 @@ const CollectionItem = ({item, addItem}) => {
     </div>
 )};
 
-const mapDispatchToProps = dispatch => ({
-    addItem: items => dispatch(addItem(items))
-});
+const mapDispatchToProps = {
+    addItem
+};
 
 export default connect(null,mapDispatchToProps)(CollectionItem)
